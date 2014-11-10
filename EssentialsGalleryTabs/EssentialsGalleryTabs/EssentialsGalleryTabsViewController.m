@@ -44,7 +44,7 @@
 #pragma mark - SEssentialsTabbedViewDataSource methods
 
 - (UIView *)tabbedView:(SEssentialsTabbedView *)tabbedView contentForTab:(SEssentialsTab *)tab {
-  return [self.mapTabToView objectForKey:[NSValue valueWithNonretainedObject:tab]];
+  return self.mapTabToView[[NSValue valueWithNonretainedObject:tab]];
 }
 
 #pragma mark - Utility methods
@@ -57,7 +57,7 @@
 
 - (void)addTabs:(int)numberOfTabs {
   for(int i = 0; i < numberOfTabs; ++i){
-    [self.tabbedView addTab:[self addTabWithName:[NSString stringWithFormat:@"Tab%i  ", i+1] andContent:self.contentText[i%3]]];
+    [self.tabbedView addTab:[self addTabWithName:[NSString stringWithFormat:@"Tab %i  ", i+1] andContent:self.contentText[i%3]]];
   }
 }
 

@@ -52,7 +52,7 @@
 
 /* Begin PBXFileReference section */
 		54E219AE1A0CCFE1004DB8D6 /* ShinobiEssentials.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiEssentials.framework; path = Library/Frameworks/ShinobiEssentials.framework; sourceTree = DEVELOPER_DIR; };
-		54E219B01A0CCFF6004DB8D6 /* ShinobiEssentials.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShinobiEssentials.bundle; sourceTree = "<group>"; };
+		54E219B01A0CCFF6004DB8D6 /* ShinobiEssentials.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ShinobiEssentials.bundle; path = ../ShinobiEssentials.bundle; sourceTree = "<group>"; };
 		54E219B21A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsEditViewController.h; sourceTree = "<group>"; };
 		54E219B31A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsEditViewController.m; sourceTree = "<group>"; };
 		54E219B41A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsInvertedViewController.h; sourceTree = "<group>"; };
@@ -136,7 +136,6 @@
 		68171BD419ADDBC5000AFEEB = {
 			isa = PBXGroup;
 			children = (
-				54E219B01A0CCFF6004DB8D6 /* ShinobiEssentials.bundle */,
 				68171C1719ADDC45000AFEEB /* ShinobiPlayUtils.xcodeproj */,
 				68171BE619ADDBC5000AFEEB /* EssentialsGalleryTabs */,
 				68171BDF19ADDBC5000AFEEB /* Frameworks */,
@@ -186,6 +185,7 @@
 		68171BE719ADDBC5000AFEEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54E219B01A0CCFF6004DB8D6 /* ShinobiEssentials.bundle */,
 				68171BE819ADDBC5000AFEEB /* EssentialsGalleryTabs-Info.plist */,
 				68171BE919ADDBC5000AFEEB /* InfoPlist.strings */,
 				68171BEC19ADDBC5000AFEEB /* main.m */,

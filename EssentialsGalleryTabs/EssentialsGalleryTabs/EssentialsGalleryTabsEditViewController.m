@@ -10,7 +10,7 @@
 
 @interface EssentialsGalleryTabsEditViewController ()
 
-@property int nextTab;
+@property NSInteger nextTab;
 
 @end
 
@@ -34,7 +34,7 @@
 
 - (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
   self.nextTab++;
-  NSString *name = [NSString stringWithFormat:@"Tab%d  ", self.nextTab];
+  NSString *name = [NSString stringWithFormat:@"Tab %i  ", self.nextTab];
   return [self addTabWithName:name andContent:self.contentText[self.nextTab % 3]];
 }
 

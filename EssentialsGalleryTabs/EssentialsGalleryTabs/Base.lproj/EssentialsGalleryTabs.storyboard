@@ -30,7 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TabsInverted" id="x6z-WU-wAf"/>
+                    <tabBarItem key="tabBarItem" title="Inverted" id="x6z-WU-wAf"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeO-xz-ZPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,7 +62,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TabsOverflow" id="9UK-Us-3tO"/>
+                    <tabBarItem key="tabBarItem" title="Overflow" id="9UK-Us-3tO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mh-xN-eNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,7 +103,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TabsEdit" id="ZLn-LB-CyR"/>
+                    <tabBarItem key="tabBarItem" title="Edit" id="ZLn-LB-CyR"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpt-bO-5aJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,7 +135,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TabsSelect" id="6QZ-IO-xL1"/>
+                    <tabBarItem key="tabBarItem" title="Select" id="6QZ-IO-xL1"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhi-UI-wYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
