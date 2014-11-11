@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
     
-  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:CGRectMake(50, 100, 924, 588)];
+  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:CGRectMake(50, 100, 874, 588)];
   self.tabbedView.editable = YES;
   self.tabbedView.hasNewTabButton = YES;
   self.nextTab = 3;

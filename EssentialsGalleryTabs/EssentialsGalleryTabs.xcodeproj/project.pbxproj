@@ -13,6 +13,7 @@
 		54E219BB1A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B51A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.m */; };
 		54E219BC1A0CD009004DB8D6 /* EssentialsGalleryTabsOverflowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B71A0CD009004DB8D6 /* EssentialsGalleryTabsOverflowViewController.m */; };
 		54E219BD1A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B91A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.m */; };
+		54E8BF291A12131200DEC27C /* EssentialsGalleryTabs-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54E8BF281A12131200DEC27C /* EssentialsGalleryTabs-data.plist */; };
 		68171BE119ADDBC5000AFEEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE019ADDBC5000AFEEB /* Foundation.framework */; };
 		68171BE319ADDBC5000AFEEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */; };
 		68171BE519ADDBC5000AFEEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE419ADDBC5000AFEEB /* UIKit.framework */; };
@@ -61,6 +62,7 @@
 		54E219B71A0CD009004DB8D6 /* EssentialsGalleryTabsOverflowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsOverflowViewController.m; sourceTree = "<group>"; };
 		54E219B81A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsSelectViewController.h; sourceTree = "<group>"; };
 		54E219B91A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsSelectViewController.m; sourceTree = "<group>"; };
+		54E8BF281A12131200DEC27C /* EssentialsGalleryTabs-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EssentialsGalleryTabs-data.plist"; sourceTree = "<group>"; };
 		68171BDD19ADDBC5000AFEEB /* EssentialsGalleryTabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialsGalleryTabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68171BE019ADDBC5000AFEEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +135,14 @@
 			name = Inverted;
 			sourceTree = "<group>";
 		};
+		54E8BF221A1212AC00DEC27C /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				54E8BF281A12131200DEC27C /* EssentialsGalleryTabs-data.plist */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
 		68171BD419ADDBC5000AFEEB = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		68171BE619ADDBC5000AFEEB /* EssentialsGalleryTabs */ = {
 			isa = PBXGroup;
 			children = (
+				54E8BF221A1212AC00DEC27C /* DataSources */,
 				54E219C11A0CD035004DB8D6 /* Inverted */,
 				54E219C01A0CD02C004DB8D6 /* Overflow */,
 				54E219BF1A0CD025004DB8D6 /* Select */,
@@ -280,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E8BF291A12131200DEC27C /* EssentialsGalleryTabs-data.plist in Resources */,
 				68171BF919ADDBC5000AFEEB /* Images.xcassets in Resources */,
 				68171BEB19ADDBC5000AFEEB /* InfoPlist.strings in Resources */,
 				68171BF419ADDBC5000AFEEB /* EssentialsGalleryTabs.storyboard in Resources */,
