@@ -20,16 +20,11 @@
 - (void)initialiseDataSource {
   self.tabbedView.dataSource = self;
   self.mapTabToView = [NSMutableDictionary new];
-  self.contentText = [NSMutableArray new];
   
   NSString *path = [[NSBundle mainBundle] pathForResource:@"EssentialsGalleryTabs-data" ofType:@"plist"];
   
   if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-    NSArray *tempArray = [[NSArray alloc] initWithContentsOfFile:path];
-    
-    for (int i = 0; i <= ([tempArray count] - 2); ++i) {
-      [self.contentText addObject:[[NSString stringWithFormat:@"%@\n\n%@", tempArray[i], tempArray[([tempArray count] - 1)]] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"]];
-    }
+    self.contentText = [[NSArray alloc] initWithContentsOfFile:path];
   }
 }
 
@@ -57,14 +52,14 @@
 
 - (void)addTabs:(int)numberOfTabs {
   for(int i = 0; i < numberOfTabs; ++i){
-    [self.tabbedView addTab:[self addTabWithName:[NSString stringWithFormat:@"Tab %i  ", i+1] andContent:self.contentText[i%3]]];
+    [self.tabbedView addTab:[self addTabWithName:[NSString stringWithFormat:@"Tab %i", i+1] andContent:self.contentText[i%3]]];
   }
 }
 
 - (SEssentialsTab *)addTabWithName:(NSString *)name andContent:(NSString *)content {
   SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:name icon:nil];
   UITextView *textView = [[UITextView alloc] initWithFrame:self.tabbedView.contentViewBounds];
-  textView.text = content;
+  textView.text = [self.contentText componentsJoinedByString:@"\n\n"];
   textView.font = [UIFont systemFontOfSize:14];
   textView.editable = NO;
   

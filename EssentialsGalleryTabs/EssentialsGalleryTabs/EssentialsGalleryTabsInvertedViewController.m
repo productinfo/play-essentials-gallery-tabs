@@ -13,10 +13,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:
-                     CGRectMake(50, 100, 924, 588)
-                                                  tabBarPosition:
-                     SEssentialsTabBarPositionBottom];
+  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:CGRectMake(50, 100, 924, 588)
+                                                  tabBarPosition:SEssentialsTabBarPositionBottom];
   self.tabbedView.delegate = self;
   [self.view addSubview:self.tabbedView];
   [self styleTabbedView];
