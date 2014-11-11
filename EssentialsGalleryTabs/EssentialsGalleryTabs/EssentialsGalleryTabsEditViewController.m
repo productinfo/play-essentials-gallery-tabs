@@ -25,7 +25,6 @@
   self.nextTab = 3;
   self.tabbedView.delegate = self;
   [self.view addSubview:self.tabbedView];
-  [self.view sendSubviewToBack:self.tabbedView];
   [self styleTabbedView];
   
   [self initialiseDataSource];
