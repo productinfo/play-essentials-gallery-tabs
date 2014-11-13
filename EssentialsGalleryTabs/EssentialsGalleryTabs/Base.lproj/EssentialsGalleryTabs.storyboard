@@ -30,12 +30,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inverted" id="x6z-WU-wAf"/>
+                    <tabBarItem key="tabBarItem" title="Inverted" image="tabs_inverted" id="x6z-WU-wAf"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeO-xz-ZPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4560" y="-1181"/>
+            <point key="canvasLocation" x="194" y="-1517"/>
         </scene>
         <!--TabsOverflow-->
         <scene sceneID="Zxi-JN-OyS">
@@ -62,12 +62,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Overflow" id="9UK-Us-3tO"/>
+                    <tabBarItem key="tabBarItem" title="Overflow" image="tabs_overflow" id="9UK-Us-3tO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mh-xN-eNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4560" y="-295"/>
+            <point key="canvasLocation" x="199" y="-638"/>
         </scene>
         <!--TabsEdit-->
         <scene sceneID="gLH-o3-6d7">
@@ -103,12 +103,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Edit" id="ZLn-LB-CyR"/>
+                    <tabBarItem key="tabBarItem" title="Edit" image="tabs_edit" id="ZLn-LB-CyR"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpt-bO-5aJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4560" y="590"/>
+            <point key="canvasLocation" x="204" y="219"/>
         </scene>
         <!--TabsSelect-->
         <scene sceneID="KPr-ZV-ejM">
@@ -135,12 +135,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Select" id="6QZ-IO-xL1"/>
+                    <tabBarItem key="tabBarItem" title="Select" image="tabs_select" id="6QZ-IO-xL1"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhi-UI-wYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4560" y="1467"/>
+            <point key="canvasLocation" x="-899" y="219"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Woe-HF-JVs">
@@ -156,8 +156,7 @@
                     <connections>
                         <segue destination="QTN-tL-Yqx" kind="relationship" relationship="viewControllers" id="gAY-hH-wK6"/>
                         <segue destination="Cbl-bZ-1nZ" kind="relationship" relationship="viewControllers" id="KUt-xw-NsL"/>
-                        <segue destination="dLC-hc-IMz" kind="relationship" relationship="viewControllers" id="v8b-g5-dTb"/>
-                        <segue destination="qe5-OZ-97b" kind="relationship" relationship="viewControllers" id="Xup-9W-n5n"/>
+                        <segue destination="qe5-OZ-97b" kind="relationship" relationship="viewControllers" id="TY3-62-IwM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Am-di-vah" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,6 +166,10 @@
     </scenes>
     <resources>
         <image name="reset" width="50" height="50"/>
+        <image name="tabs_edit" width="25" height="25"/>
+        <image name="tabs_inverted" width="25" height="24"/>
+        <image name="tabs_overflow" width="25" height="27"/>
+        <image name="tabs_select" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
