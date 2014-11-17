@@ -157,6 +157,7 @@
                         <segue destination="QTN-tL-Yqx" kind="relationship" relationship="viewControllers" id="gAY-hH-wK6"/>
                         <segue destination="Cbl-bZ-1nZ" kind="relationship" relationship="viewControllers" id="KUt-xw-NsL"/>
                         <segue destination="qe5-OZ-97b" kind="relationship" relationship="viewControllers" id="TY3-62-IwM"/>
+                        <segue destination="dLC-hc-IMz" kind="relationship" relationship="viewControllers" id="Gfg-j0-Zl9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Am-di-vah" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.source_files = 'EssentialsGalleryTabs/EssentialsGalleryTabs/**/*.{h,m}'
   s.dependency 'ShinobiPlayUtils'
   s.resources = ['EssentialsGalleryTabs/**/EssentialsGalleryTabs-data.plist', 'EssentialsGalleryTabs/**/*.storyboard', 'EssentialsGalleryTabs/**/*.xib', 'EssentialsGalleryTabs/**/*.xcassets']
-  s.frameworks = 'QuartzCore', 'ShinobiEssentials>'
+  s.frameworks = 'QuartzCore', 'ShinobiEssentials'
   s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"$(DEVELOPER_FRAMEWORKS_DIR)" "$(PROJECT_DIR)/../"' }
 end

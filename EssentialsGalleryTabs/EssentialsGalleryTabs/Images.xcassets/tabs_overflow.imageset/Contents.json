@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "tabs_overflow*1.png"
+      "filename" : "tabs_overflow@1x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "tabs_overflow*2.png"
+      "filename" : "tabs_overflow@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "tabs_overflow*3.png"
+      "filename" : "tabs_overflow@3x.png"
     }
   ],
   "info" : {
