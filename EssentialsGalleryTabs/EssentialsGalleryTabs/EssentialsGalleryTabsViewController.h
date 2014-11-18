@@ -15,12 +15,9 @@
 @property NSArray *contentText;
 
 - (void)resetTabs;
-
-#pragma mark - Utility methods
-
 - (void)styleTabbedView;
 - (void)addTabs:(int)numberOfTabs;
-- (SEssentialsTab *)createTabWithName:(NSString *)name andContentFromPosition:(NSInteger)startIndex;
+- (SEssentialsTab *)createTabWithName:(NSString *)name andContent:(NSUInteger)index;
 - (void)initialiseDataSource;
 
 @end

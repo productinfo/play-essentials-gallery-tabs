@@ -31,8 +31,8 @@
 
 - (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
   self.nextTab++;
-  NSString *name = [NSString stringWithFormat:@"Tab %zd  ", self.nextTab];
-  return [self createTabWithName:name andContentFromPosition:self.nextTab];
+  NSString *name = [NSString stringWithFormat:@"Tab %zd", self.nextTab];
+  return [self createTabWithName:name andContent:(NSUInteger)self.nextTab];
 }
 
 - (IBAction)resetDemo{

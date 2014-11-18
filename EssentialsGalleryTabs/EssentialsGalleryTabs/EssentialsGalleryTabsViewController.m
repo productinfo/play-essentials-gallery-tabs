@@ -57,20 +57,14 @@
 
 - (void)addTabs:(int)numberOfTabs {
   for(int i = 0; i < numberOfTabs; ++i){
-    [self.tabbedView addTab:[self createTabWithName:[NSString stringWithFormat:@"Tab %i", i+1] andContentFromPosition:i]];
+    [self.tabbedView addTab:[self createTabWithName:[NSString stringWithFormat:@"Tab %i", i+1] andContent:(NSUInteger)i]];
   }
 }
 
-- (SEssentialsTab *)createTabWithName:(NSString *)name andContentFromPosition:(NSInteger)startIndex {
-  NSMutableArray *subarray = [NSMutableArray new];
-  int paragraphCount = (int)self.contentText.count;
-  for(int i = 0; i < 8; ++i){
-    [subarray addObject:self.contentText[(startIndex + i) % paragraphCount]];
-  }
-  
+- (SEssentialsTab *)createTabWithName:(NSString *)name andContent:(NSUInteger)index {
   SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:name icon:nil];
   UITextView *textView = [[UITextView alloc] initWithFrame:self.tabbedView.contentViewBounds];
-  textView.text = [subarray componentsJoinedByString:@"\n\n"];
+  textView.text = self.contentText[index];
   textView.font = [UIFont systemFontOfSize:14];
   textView.editable = NO;
   
