@@ -57,14 +57,14 @@
 
 - (void)addTabs:(int)numberOfTabs {
   for(int i = 0; i < numberOfTabs; ++i){
-    [self.tabbedView addTab:[self createTabWithName:[NSString stringWithFormat:@"Tab %i", i+1] andContent:(NSUInteger)i]];
+    [self.tabbedView addTab:[self createTabWithName:[NSString stringWithFormat:@"Tab %i", i+1] atIndex:(NSUInteger)i]];
   }
 }
 
-- (SEssentialsTab *)createTabWithName:(NSString *)name andContent:(NSUInteger)index {
+- (SEssentialsTab *)createTabWithName:(NSString *)name atIndex:(NSUInteger)index {
   SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:name icon:nil];
   UITextView *textView = [[UITextView alloc] initWithFrame:self.tabbedView.contentViewBounds];
-  textView.text = self.contentText[index];
+  textView.text = self.contentText[index%15];
   textView.font = [UIFont systemFontOfSize:14];
   textView.editable = NO;
   

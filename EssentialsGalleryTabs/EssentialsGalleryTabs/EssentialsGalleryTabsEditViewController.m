@@ -32,7 +32,7 @@
 - (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
   self.nextTab++;
   NSString *name = [NSString stringWithFormat:@"Tab %zd", self.nextTab];
-  return [self createTabWithName:name andContent:(NSUInteger)self.nextTab];
+  return [self createTabWithName:name atIndex:(NSUInteger)self.nextTab];
 }
 
 - (IBAction)resetDemo{
