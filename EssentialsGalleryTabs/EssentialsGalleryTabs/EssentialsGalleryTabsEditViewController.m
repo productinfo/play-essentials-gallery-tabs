@@ -19,13 +19,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
     
-  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:CGRectMake(50, 100, 874, 588)];
+  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = YES;
   self.tabbedView.hasNewTabButton = YES;
   self.nextTab = 3;
-  self.tabbedView.delegate = self;
-  [self.view addSubview:self.tabbedView];
-  [self styleTabbedView];
+  [self.tabsView addSubview:self.tabbedView];
   
   [self initialiseDataSource];
   [self addTabs:3];
@@ -33,8 +31,8 @@
 
 - (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
   self.nextTab++;
-  NSString *name = [NSString stringWithFormat:@"Tab %i  ", self.nextTab];
-  return [self addTabWithName:name andContent:self.contentText[self.nextTab % 3]];
+  NSString *name = [NSString stringWithFormat:@"Tab %zd  ", self.nextTab];
+  return [self createTabWithName:name andContentFromPosition:self.nextTab];
 }
 
 - (IBAction)resetDemo{

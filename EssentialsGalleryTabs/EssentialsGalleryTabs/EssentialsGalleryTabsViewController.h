@@ -20,7 +20,7 @@
 
 - (void)styleTabbedView;
 - (void)addTabs:(int)numberOfTabs;
-- (SEssentialsTab *)addTabWithName:(NSString *)name andContent:(NSString *)content;
+- (SEssentialsTab *)createTabWithName:(NSString *)name andContentFromPosition:(NSInteger)startIndex;
 - (void)initialiseDataSource;
 
 @end

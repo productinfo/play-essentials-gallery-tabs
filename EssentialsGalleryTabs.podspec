@@ -7,9 +7,9 @@
 Pod::Spec.new do |s|
   s.name             = "EssentialsGalleryTabs"
   s.version          = '0.1.0'
-  s.summary          = "<Summary>"
+  s.summary          = "A gallery of ShinobiEssentials Tabs"
   s.description      = <<-DESC
-                       <Description>
+                       An app demonstrating the out of the box functionality supported by ShinobiEssentials Tabs
                        DESC
   s.homepage         = "http://www.shinobicontrols.com"
   s.license          = 'Apache License, Version 2.0'

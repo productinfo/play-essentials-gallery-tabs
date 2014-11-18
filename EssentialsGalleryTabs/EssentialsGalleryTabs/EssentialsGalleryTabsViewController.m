@@ -17,6 +17,13 @@
 
 @implementation EssentialsGalleryTabsViewController
 
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  self.tabbedView.delegate = self;
+  [self styleTabbedView];
+}
+
 - (void)initialiseDataSource {
   self.tabbedView.dataSource = self;
   self.mapTabToView = [NSMutableDictionary new];
@@ -31,7 +38,7 @@
 - (void)resetTabs {
   [self initialiseDataSource];
   [self addTabs:3];
-  for(int i = (self.tabbedView.allTabs.count - 3); i > 0; --i){
+  for(int i = ((int)self.tabbedView.allTabs.count - 3); i > 0; --i){
     [self.tabbedView removeTabDisplayedAtIndex:i];
   }
 }
@@ -42,28 +49,32 @@
   return self.mapTabToView[[NSValue valueWithNonretainedObject:tab]];
 }
 
-#pragma mark - Utility methods
-
 - (void)styleTabbedView {
-  // Add a border to the sliding overlay
+  // Add a border to the tab
   self.tabbedView.layer.borderColor = [UIColor lightGrayColor].CGColor;
   self.tabbedView.layer.borderWidth = 1.f;
 }
 
 - (void)addTabs:(int)numberOfTabs {
   for(int i = 0; i < numberOfTabs; ++i){
-    [self.tabbedView addTab:[self addTabWithName:[NSString stringWithFormat:@"Tab %i", i+1] andContent:self.contentText[i%3]]];
+    [self.tabbedView addTab:[self createTabWithName:[NSString stringWithFormat:@"Tab %i", i+1] andContentFromPosition:i]];
   }
 }
 
-- (SEssentialsTab *)addTabWithName:(NSString *)name andContent:(NSString *)content {
+- (SEssentialsTab *)createTabWithName:(NSString *)name andContentFromPosition:(NSInteger)startIndex {
+  NSMutableArray *subarray = [NSMutableArray new];
+  int paragraphCount = (int)self.contentText.count;
+  for(int i = 0; i < 8; ++i){
+    [subarray addObject:self.contentText[(startIndex + i) % paragraphCount]];
+  }
+  
   SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:name icon:nil];
   UITextView *textView = [[UITextView alloc] initWithFrame:self.tabbedView.contentViewBounds];
-  textView.text = [self.contentText componentsJoinedByString:@"\n\n"];
+  textView.text = [subarray componentsJoinedByString:@"\n\n"];
   textView.font = [UIFont systemFontOfSize:14];
   textView.editable = NO;
   
-  [self.mapTabToView setObject:textView forKey:[NSValue valueWithNonretainedObject:tab]];
+  self.mapTabToView[[NSValue valueWithNonretainedObject:tab]] = textView;
   return tab;
 }
 

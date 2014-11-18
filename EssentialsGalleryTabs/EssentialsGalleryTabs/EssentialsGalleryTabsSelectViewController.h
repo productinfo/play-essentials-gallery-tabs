@@ -10,4 +10,6 @@
 
 @interface EssentialsGalleryTabsSelectViewController : EssentialsGalleryTabsViewController
 
+@property (weak, nonatomic) IBOutlet UIView* tabsView;
+
 @end

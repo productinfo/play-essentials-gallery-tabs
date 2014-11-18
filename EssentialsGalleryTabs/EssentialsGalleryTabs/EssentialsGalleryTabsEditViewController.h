@@ -10,6 +10,8 @@
 
 @interface EssentialsGalleryTabsEditViewController : EssentialsGalleryTabsViewController
 
+@property (weak, nonatomic) IBOutlet UIView* tabsView;
+
 - (IBAction)resetDemo;
 
 @end

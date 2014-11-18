@@ -13,13 +13,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:CGRectMake(50, 100, 924, 588)];
+  self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = NO;
   self.tabbedView.hasNewTabButton = NO;
   self.tabbedView.hasOverflowDropdown = YES;
-  self.tabbedView.delegate = self;
-  [self.view addSubview:self.tabbedView];
-  [self styleTabbedView];
+  [self.tabsView addSubview:self.tabbedView];
   
   [self initialiseDataSource];
   [self addTabs:15];
