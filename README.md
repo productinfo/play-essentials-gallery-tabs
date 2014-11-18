@@ -1,4 +1,4 @@
-ShinobiPlay: Essentials Gallery (Objective)
+ShinobiPlay: Essentials Gallery (Objective-C)
 =====================
 
 An app demonstrating the out of the box functionality supported by ShinobiEssentials Tabs
