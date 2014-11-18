@@ -10,7 +10,9 @@ Building the project
 
 In order to build this project you'll need a copy of ShinobiEssentials. If you don't have it yet, you can download a free trial from the [ShinobiEssentials website](http://www.shinobicontrols.com/ios/shinobiessentials/price-plans/shinobiessentials/shinobiessentials-trial-form).
 
-If you've used the installer to install ShinobiEssentials, the project should just work. If you haven't, then once you've downloaded and unzipped ShinobiEssentials, open up the project in Xcode, and drag ShinobiEssentials.framework from the finder into Xcode's 'frameworks' group, and Xcode will sort out all the header and linker paths for you.
+You'll need to add the links to the ShinobiEssentials bundle to the project. Open up the project in Xcode, then open your ShinobiEssentials download in finder, and drag ShinobiEssentials.bundle from finder into Xcode's 'frameworks' group. 
+
+If you haven't run the ShinobiEssentials installer, you'll also need drag ShinobiEssentials.framework into Xcode's 'frameworks' group. 
 
 If you're using the trial version you'll need to add your license key. To do so, open up **MyProjectNameViewController.m** and add the following line inside `viewDidLoad`:
 
