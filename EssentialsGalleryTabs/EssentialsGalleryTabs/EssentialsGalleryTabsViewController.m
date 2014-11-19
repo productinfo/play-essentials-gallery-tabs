@@ -64,7 +64,7 @@
 - (SEssentialsTab *)createTabWithName:(NSString *)name atIndex:(NSUInteger)index {
   SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:name icon:nil];
   UITextView *textView = [[UITextView alloc] initWithFrame:self.tabbedView.contentViewBounds];
-  textView.text = self.contentText[index%15];
+  textView.text = self.contentText[index%self.contentText.count];
   textView.font = [UIFont systemFontOfSize:14];
   textView.editable = NO;
   
