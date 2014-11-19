@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = "http://www.shinobicontrols.com"
   s.license          = 'Apache License, Version 2.0'
   s.author           = { "Daniel Allsop" => "dallsop@shinobicontrols.com" }
-  s.source           = { :git => "https://bitbucket.org/shinobicontrols/play-essentials-tabs", 
+  s.source           = { :git => "https://bitbucket.org/shinobicontrols/play-essentials-gallery-tabs.git", 
                          :tag => s.version.to_s,
                          :submodules => true 
                        }
