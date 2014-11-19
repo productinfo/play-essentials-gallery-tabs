@@ -15,6 +15,7 @@ build/
 *.xcodeproj/xcuserdata/*.xcuserdatad
 *.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad
 *.xcodeproj/project.pbxproj
+*ShinobiEssentials.bundle
 
 *.xcuserstate
 xcuserdata/

@@ -1,6 +1,6 @@
 //
-//  MyPlayProjectAppDelegate.m
-//  MyPlayProject
+//  EssentialsGalleryTabsAppDelegate.m
+//  EssentialsGalleryTabs
 //
 //  Created by Alison Clarke on 27/08/2014.
 //
@@ -19,9 +19,9 @@
 //  limitations under the License.
 //
 
-#import "MyPlayProjectAppDelegate.h"
+#import "EssentialsGalleryTabsAppDelegate.h"
 
-@implementation MyPlayProjectAppDelegate
+@implementation EssentialsGalleryTabsAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
