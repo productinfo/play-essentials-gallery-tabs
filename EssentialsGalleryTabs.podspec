@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "EssentialsGalleryTabs"
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = "A gallery of ShinobiEssentials Tabs"
   s.description      = <<-DESC
                        An app demonstrating the out of the box functionality supported by ShinobiEssentials Tabs
