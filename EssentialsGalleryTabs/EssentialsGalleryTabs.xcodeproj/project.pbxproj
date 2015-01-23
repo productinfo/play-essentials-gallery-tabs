@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5418FDEB1A71364300EE15EC /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDDF1A71364300EE15EC /* Roboto-Black.ttf */; };
+		5418FDEC1A71364300EE15EC /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE01A71364300EE15EC /* Roboto-BlackItalic.ttf */; };
+		5418FDED1A71364300EE15EC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE11A71364300EE15EC /* Roboto-Bold.ttf */; };
+		5418FDEE1A71364300EE15EC /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE21A71364300EE15EC /* Roboto-BoldItalic.ttf */; };
+		5418FDEF1A71364300EE15EC /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE31A71364300EE15EC /* Roboto-Italic.ttf */; };
+		5418FDF01A71364300EE15EC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE41A71364300EE15EC /* Roboto-Light.ttf */; };
+		5418FDF11A71364300EE15EC /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE51A71364300EE15EC /* Roboto-LightItalic.ttf */; };
+		5418FDF21A71364300EE15EC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE61A71364300EE15EC /* Roboto-Medium.ttf */; };
+		5418FDF31A71364300EE15EC /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE71A71364300EE15EC /* Roboto-MediumItalic.ttf */; };
+		5418FDF41A71364300EE15EC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE81A71364300EE15EC /* Roboto-Regular.ttf */; };
+		5418FDF51A71364300EE15EC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE91A71364300EE15EC /* Roboto-Thin.ttf */; };
+		5418FDF61A71364300EE15EC /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDEA1A71364300EE15EC /* Roboto-ThinItalic.ttf */; };
+		54E1A1131A697887000C0B02 /* ShinobiEssentials.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54E1A1121A697887000C0B02 /* ShinobiEssentials.bundle */; };
 		54E219AF1A0CCFE1004DB8D6 /* ShinobiEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E219AE1A0CCFE1004DB8D6 /* ShinobiEssentials.framework */; };
-		54E219B11A0CCFF6004DB8D6 /* ShinobiEssentials.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54E219B01A0CCFF6004DB8D6 /* ShinobiEssentials.bundle */; };
 		54E219BA1A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B31A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m */; };
 		54E219BB1A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B51A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.m */; };
 		54E219BC1A0CD009004DB8D6 /* EssentialsGalleryTabsOverflowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B71A0CD009004DB8D6 /* EssentialsGalleryTabsOverflowViewController.m */; };
 		54E219BD1A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B91A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.m */; };
-		54E8BF291A12131200DEC27C /* EssentialsGalleryTabs-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54E8BF281A12131200DEC27C /* EssentialsGalleryTabs-data.plist */; };
 		68171BE119ADDBC5000AFEEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE019ADDBC5000AFEEB /* Foundation.framework */; };
 		68171BE319ADDBC5000AFEEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */; };
 		68171BE519ADDBC5000AFEEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171BE419ADDBC5000AFEEB /* UIKit.framework */; };
@@ -52,8 +63,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5418FDDF1A71364300EE15EC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		5418FDE01A71364300EE15EC /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5418FDE11A71364300EE15EC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		5418FDE21A71364300EE15EC /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5418FDE31A71364300EE15EC /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		5418FDE41A71364300EE15EC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		5418FDE51A71364300EE15EC /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		5418FDE61A71364300EE15EC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		5418FDE71A71364300EE15EC /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5418FDE81A71364300EE15EC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		5418FDE91A71364300EE15EC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		5418FDEA1A71364300EE15EC /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		54E1A1121A697887000C0B02 /* ShinobiEssentials.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ShinobiEssentials.bundle; path = ../../../../Desktop/ShinobiEssentials.bundle; sourceTree = "<group>"; };
 		54E219AE1A0CCFE1004DB8D6 /* ShinobiEssentials.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiEssentials.framework; path = Library/Frameworks/ShinobiEssentials.framework; sourceTree = DEVELOPER_DIR; };
-		54E219B01A0CCFF6004DB8D6 /* ShinobiEssentials.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ShinobiEssentials.bundle; path = ../ShinobiEssentials.bundle; sourceTree = "<group>"; };
 		54E219B21A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsEditViewController.h; sourceTree = "<group>"; };
 		54E219B31A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsEditViewController.m; sourceTree = "<group>"; };
 		54E219B41A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsInvertedViewController.h; sourceTree = "<group>"; };
@@ -62,20 +85,19 @@
 		54E219B71A0CD009004DB8D6 /* EssentialsGalleryTabsOverflowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsOverflowViewController.m; sourceTree = "<group>"; };
 		54E219B81A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsSelectViewController.h; sourceTree = "<group>"; };
 		54E219B91A0CD009004DB8D6 /* EssentialsGalleryTabsSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsSelectViewController.m; sourceTree = "<group>"; };
-		54E8BF281A12131200DEC27C /* EssentialsGalleryTabs-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EssentialsGalleryTabs-data.plist"; sourceTree = "<group>"; };
 		68171BDD19ADDBC5000AFEEB /* EssentialsGalleryTabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialsGalleryTabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68171BE019ADDBC5000AFEEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68171BE219ADDBC5000AFEEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		68171BE419ADDBC5000AFEEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		68171BE819ADDBC5000AFEEB /* EssentialsGalleryTabs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EssentialsGalleryTabs-Info.plist"; sourceTree = "<group>"; };
 		68171BEA19ADDBC5000AFEEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		68171BEC19ADDBC5000AFEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		68171BEC19ADDBC5000AFEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; };
 		68171BEE19ADDBC5000AFEEB /* EssentialsGalleryTabs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EssentialsGalleryTabs-Prefix.pch"; sourceTree = "<group>"; };
 		68171BEF19ADDBC5000AFEEB /* EssentialsGalleryTabsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsAppDelegate.h; sourceTree = "<group>"; };
-		68171BF019ADDBC5000AFEEB /* EssentialsGalleryTabsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EssentialsGalleryTabsAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		68171BF019ADDBC5000AFEEB /* EssentialsGalleryTabsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EssentialsGalleryTabsAppDelegate.m; sourceTree = "<group>"; };
 		68171BF319ADDBC5000AFEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EssentialsGalleryTabs.storyboard; sourceTree = "<group>"; };
-		68171BF519ADDBC5000AFEEB /* EssentialsGalleryTabsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EssentialsGalleryTabsViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		68171BF619ADDBC5000AFEEB /* EssentialsGalleryTabsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EssentialsGalleryTabsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		68171BF519ADDBC5000AFEEB /* EssentialsGalleryTabsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EssentialsGalleryTabsViewController.h; sourceTree = "<group>"; };
+		68171BF619ADDBC5000AFEEB /* EssentialsGalleryTabsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EssentialsGalleryTabsViewController.m; sourceTree = "<group>"; };
 		68171BF819ADDBC5000AFEEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		68171BFF19ADDBC5000AFEEB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		68171C1519ADDC04000AFEEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -99,6 +121,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5418FDDE1A71364300EE15EC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5418FDDF1A71364300EE15EC /* Roboto-Black.ttf */,
+				5418FDE01A71364300EE15EC /* Roboto-BlackItalic.ttf */,
+				5418FDE11A71364300EE15EC /* Roboto-Bold.ttf */,
+				5418FDE21A71364300EE15EC /* Roboto-BoldItalic.ttf */,
+				5418FDE31A71364300EE15EC /* Roboto-Italic.ttf */,
+				5418FDE41A71364300EE15EC /* Roboto-Light.ttf */,
+				5418FDE51A71364300EE15EC /* Roboto-LightItalic.ttf */,
+				5418FDE61A71364300EE15EC /* Roboto-Medium.ttf */,
+				5418FDE71A71364300EE15EC /* Roboto-MediumItalic.ttf */,
+				5418FDE81A71364300EE15EC /* Roboto-Regular.ttf */,
+				5418FDE91A71364300EE15EC /* Roboto-Thin.ttf */,
+				5418FDEA1A71364300EE15EC /* Roboto-ThinItalic.ttf */,
+			);
+			name = Fonts;
+			path = ShinobiPlayUtils/ShinobiPlayUtils/ShinobiPlayUtils/Fonts;
+			sourceTree = SOURCE_ROOT;
+		};
 		54E219BE1A0CD01A004DB8D6 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,14 +177,6 @@
 			name = Inverted;
 			sourceTree = "<group>";
 		};
-		54E8BF221A1212AC00DEC27C /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				54E8BF281A12131200DEC27C /* EssentialsGalleryTabs-data.plist */,
-			);
-			name = DataSources;
-			sourceTree = "<group>";
-		};
 		68171BD419ADDBC5000AFEEB = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +211,7 @@
 		68171BE619ADDBC5000AFEEB /* EssentialsGalleryTabs */ = {
 			isa = PBXGroup;
 			children = (
-				54E8BF221A1212AC00DEC27C /* DataSources */,
+				5418FDDE1A71364300EE15EC /* Fonts */,
 				54E219C11A0CD035004DB8D6 /* Inverted */,
 				54E219C01A0CD02C004DB8D6 /* Overflow */,
 				54E219BF1A0CD025004DB8D6 /* Select */,
@@ -196,7 +230,7 @@
 		68171BE719ADDBC5000AFEEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54E219B01A0CCFF6004DB8D6 /* ShinobiEssentials.bundle */,
+				54E1A1121A697887000C0B02 /* ShinobiEssentials.bundle */,
 				68171BE819ADDBC5000AFEEB /* EssentialsGalleryTabs-Info.plist */,
 				68171BE919ADDBC5000AFEEB /* InfoPlist.strings */,
 				68171BEC19ADDBC5000AFEEB /* main.m */,
@@ -291,11 +325,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E8BF291A12131200DEC27C /* EssentialsGalleryTabs-data.plist in Resources */,
+				5418FDF51A71364300EE15EC /* Roboto-Thin.ttf in Resources */,
+				5418FDF21A71364300EE15EC /* Roboto-Medium.ttf in Resources */,
+				5418FDEE1A71364300EE15EC /* Roboto-BoldItalic.ttf in Resources */,
+				5418FDF11A71364300EE15EC /* Roboto-LightItalic.ttf in Resources */,
+				5418FDF31A71364300EE15EC /* Roboto-MediumItalic.ttf in Resources */,
 				68171BF919ADDBC5000AFEEB /* Images.xcassets in Resources */,
+				5418FDF01A71364300EE15EC /* Roboto-Light.ttf in Resources */,
 				68171BEB19ADDBC5000AFEEB /* InfoPlist.strings in Resources */,
+				5418FDEC1A71364300EE15EC /* Roboto-BlackItalic.ttf in Resources */,
+				5418FDF61A71364300EE15EC /* Roboto-ThinItalic.ttf in Resources */,
+				54E1A1131A697887000C0B02 /* ShinobiEssentials.bundle in Resources */,
 				68171BF419ADDBC5000AFEEB /* EssentialsGalleryTabs.storyboard in Resources */,
-				54E219B11A0CCFF6004DB8D6 /* ShinobiEssentials.bundle in Resources */,
+				5418FDEF1A71364300EE15EC /* Roboto-Italic.ttf in Resources */,
+				5418FDF41A71364300EE15EC /* Roboto-Regular.ttf in Resources */,
+				5418FDED1A71364300EE15EC /* Roboto-Bold.ttf in Resources */,
+				5418FDEB1A71364300EE15EC /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +476,7 @@
 				GCC_PREFIX_HEADER = "EssentialsGalleryTabs/EssentialsGalleryTabs-Prefix.pch";
 				INFOPLIST_FILE = "EssentialsGalleryTabs/EssentialsGalleryTabs-Info.plist";
 				OTHER_CFLAGS = "-Wconversion";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = EssentialsGalleryTabs;
 				WRAPPER_EXTENSION = app;
 			};
@@ -449,6 +495,7 @@
 				GCC_PREFIX_HEADER = "EssentialsGalleryTabs/EssentialsGalleryTabs-Prefix.pch";
 				INFOPLIST_FILE = "EssentialsGalleryTabs/EssentialsGalleryTabs-Info.plist";
 				OTHER_CFLAGS = "-Wconversion";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = EssentialsGalleryTabs;
 				WRAPPER_EXTENSION = app;
 			};
