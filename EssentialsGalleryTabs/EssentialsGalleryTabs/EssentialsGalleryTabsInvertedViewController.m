@@ -19,6 +19,7 @@
     
   [self initialiseDataSource];
   [self addTabs:3];
+  [self styleTabbedView];
 }
 
 @end

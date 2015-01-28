@@ -19,6 +19,9 @@
 		5418FDF41A71364300EE15EC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE81A71364300EE15EC /* Roboto-Regular.ttf */; };
 		5418FDF51A71364300EE15EC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDE91A71364300EE15EC /* Roboto-Thin.ttf */; };
 		5418FDF61A71364300EE15EC /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5418FDEA1A71364300EE15EC /* Roboto-ThinItalic.ttf */; };
+		545979FB1A7657B7003515BF /* ContentTab1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 545979F81A7657B7003515BF /* ContentTab1.rtf */; };
+		545979FC1A7657B7003515BF /* ContentTab2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 545979F91A7657B7003515BF /* ContentTab2.rtf */; };
+		545979FF1A7678A3003515BF /* ContentTab0.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 545979FE1A7678A3003515BF /* ContentTab0.rtf */; };
 		54E1A1131A697887000C0B02 /* ShinobiEssentials.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54E1A1121A697887000C0B02 /* ShinobiEssentials.bundle */; };
 		54E219AF1A0CCFE1004DB8D6 /* ShinobiEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E219AE1A0CCFE1004DB8D6 /* ShinobiEssentials.framework */; };
 		54E219BA1A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B31A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m */; };
@@ -75,6 +78,9 @@
 		5418FDE81A71364300EE15EC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		5418FDE91A71364300EE15EC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		5418FDEA1A71364300EE15EC /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		545979F81A7657B7003515BF /* ContentTab1.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ContentTab1.rtf; sourceTree = "<group>"; };
+		545979F91A7657B7003515BF /* ContentTab2.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ContentTab2.rtf; sourceTree = "<group>"; };
+		545979FE1A7678A3003515BF /* ContentTab0.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ContentTab0.rtf; sourceTree = "<group>"; };
 		54E1A1121A697887000C0B02 /* ShinobiEssentials.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ShinobiEssentials.bundle; path = ../../../../Desktop/ShinobiEssentials.bundle; sourceTree = "<group>"; };
 		54E219AE1A0CCFE1004DB8D6 /* ShinobiEssentials.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiEssentials.framework; path = Library/Frameworks/ShinobiEssentials.framework; sourceTree = DEVELOPER_DIR; };
 		54E219B21A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsEditViewController.h; sourceTree = "<group>"; };
@@ -230,6 +236,9 @@
 		68171BE719ADDBC5000AFEEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				545979FE1A7678A3003515BF /* ContentTab0.rtf */,
+				545979F81A7657B7003515BF /* ContentTab1.rtf */,
+				545979F91A7657B7003515BF /* ContentTab2.rtf */,
 				54E1A1121A697887000C0B02 /* ShinobiEssentials.bundle */,
 				68171BE819ADDBC5000AFEEB /* EssentialsGalleryTabs-Info.plist */,
 				68171BE919ADDBC5000AFEEB /* InfoPlist.strings */,
@@ -327,6 +336,7 @@
 			files = (
 				5418FDF51A71364300EE15EC /* Roboto-Thin.ttf in Resources */,
 				5418FDF21A71364300EE15EC /* Roboto-Medium.ttf in Resources */,
+				545979FF1A7678A3003515BF /* ContentTab0.rtf in Resources */,
 				5418FDEE1A71364300EE15EC /* Roboto-BoldItalic.ttf in Resources */,
 				5418FDF11A71364300EE15EC /* Roboto-LightItalic.ttf in Resources */,
 				5418FDF31A71364300EE15EC /* Roboto-MediumItalic.ttf in Resources */,
@@ -334,7 +344,9 @@
 				5418FDF01A71364300EE15EC /* Roboto-Light.ttf in Resources */,
 				68171BEB19ADDBC5000AFEEB /* InfoPlist.strings in Resources */,
 				5418FDEC1A71364300EE15EC /* Roboto-BlackItalic.ttf in Resources */,
+				545979FC1A7657B7003515BF /* ContentTab2.rtf in Resources */,
 				5418FDF61A71364300EE15EC /* Roboto-ThinItalic.ttf in Resources */,
+				545979FB1A7657B7003515BF /* ContentTab1.rtf in Resources */,
 				54E1A1131A697887000C0B02 /* ShinobiEssentials.bundle in Resources */,
 				68171BF419ADDBC5000AFEEB /* EssentialsGalleryTabs.storyboard in Resources */,
 				5418FDEF1A71364300EE15EC /* Roboto-Italic.ttf in Resources */,

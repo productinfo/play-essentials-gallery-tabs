@@ -22,21 +22,22 @@
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = YES;
   self.tabbedView.hasNewTabButton = YES;
-  self.nextTab = 3;
+  self.nextTab = 2;
   [self.tabsView addSubview:self.tabbedView];
   
   [self initialiseDataSource];
   [self addTabs:3];
+  [self styleTabbedView];
 }
 
 - (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
   self.nextTab++;
-  NSString *name = [NSString stringWithFormat:@"Tab %zd", self.nextTab];
+  NSString *name = [NSString stringWithFormat:@"Tab %zd", self.nextTab + 1];
   return [self createTabWithName:name atIndex:(NSUInteger)self.nextTab];
 }
 
 - (IBAction)resetDemo{
-  self.nextTab = 3;
+  self.nextTab = 2;
   [super resetTabs];
 }
 
