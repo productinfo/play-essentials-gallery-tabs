@@ -36,7 +36,6 @@
   for(int i = ((int)self.tabbedView.allTabs.count - 3); i > 0; --i){
     [self.tabbedView removeTabDisplayedAtIndex:0];
   }
-
 }
 
 #pragma mark - SEssentialsTabbedViewDataSource methods
