@@ -111,7 +111,6 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     [imageView setFrame:CGRectMake(leftHandPadding, 60 + padding, size.width, size.height)];
   
-
     // We need to add an exclusion path to the text view so the text will wrap around the image.
     // The coordinates of the exclusion path need to be specified in container coordinates like so
     CGRect imageFrame = [textView convertRect:imageView.bounds fromView:imageView];
