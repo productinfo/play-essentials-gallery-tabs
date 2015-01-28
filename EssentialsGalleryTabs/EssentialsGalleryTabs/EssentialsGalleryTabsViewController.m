@@ -76,8 +76,12 @@
   // Load the data from the rtf at the path
   NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
   
-  // Init an attributed string using the loaded rtf data retaining the format of the text as it was in the rtf
-  NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:data options:nil documentAttributes:nil error:nil];
+  // Init an attributed string using the loaded rtf data retaining the format of
+  // the text as it was in the rtf
+  NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:data
+                                                                          options:nil
+                                                               documentAttributes:nil
+                                                                            error:nil];
   textView.attributedText = attributedString;
   textView.textAlignment = NSTextAlignmentJustified;
   
@@ -101,8 +105,8 @@
 - (void)addImage:(UIImage*)image withSize:(CGSize)size andExclusionPathToUITextView:(UITextView*)textView
     leftPosition:(BOOL)leftPosition padding:(CGFloat)padding{
   
-    CGFloat leftHandPadding = (leftPosition) ? padding + textView.textContainer.lineFragmentPadding :
-  CGRectGetWidth(textView.frame) - size.width - padding - textView.textContainer.lineFragmentPadding;
+    CGFloat leftHandPadding = (leftPosition) ? padding + textView.textContainer.lineFragmentPadding
+                                             : CGRectGetWidth(textView.frame) - size.width - padding - textView.textContainer.lineFragmentPadding;
   
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     [imageView setFrame:CGRectMake(leftHandPadding, 60 + padding, size.width, size.height)];
