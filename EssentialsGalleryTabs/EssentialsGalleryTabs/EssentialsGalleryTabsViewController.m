@@ -65,18 +65,29 @@
   
   CGFloat padding = 20;
   
-  textView.textContainerInset = UIEdgeInsetsMake(textView.textContainerInset.top + padding, textView.textContainerInset.left + padding, textView.textContainerInset.bottom, textView.textContainerInset.right + padding);
+  textView.textContainerInset = UIEdgeInsetsMake(textView.textContainerInset.top + padding,
+                                                 textView.textContainerInset.left + padding,
+                                                 textView.textContainerInset.bottom,
+                                                 textView.textContainerInset.right + padding);
   
+  // Retreive path to rtf containing text for display in the SEssentialsTabbedView
   NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"ContentTab%lu", (unsigned long)(index % 3)] ofType:@"rtf"];
+  
+  // Load the data from the rtf at the path
   NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
+  
+  // Init an attributed string using the loaded rtf data retaining the format of the text as it was in the rtf
   NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:data options:nil documentAttributes:nil error:nil];
   textView.attributedText = attributedString;
   textView.textAlignment = NSTextAlignmentJustified;
   
   BOOL imageOnLeft = (index % 2) ? NO : YES;
-  [self addImage:[UIImage imageNamed:@"shinobi_play_orange_placeholder_image"] withSize:CGSizeMake(85, 85) andExclusionPathToUITextView:textView leftPosition:imageOnLeft padding:padding];
+  [self addImage:[UIImage imageNamed:@"shinobi_play_orange_placeholder_image"]
+        withSize:CGSizeMake(85, 85) andExclusionPathToUITextView:textView
+    leftPosition:imageOnLeft
+         padding:padding];
   
-  if ((index % 3) % 2) {
+  if ((index % 3) == 1) {
     [textView sizeToFit];
     [self addImage:[UIImage imageNamed:@"shinobi_play_orange_placeholder_image_long"]
          withFrame:CGRectMake(190, CGRectGetMaxY(textView.frame) + 12, 450, 55)
@@ -87,9 +98,11 @@
   return tab;
 }
 
-- (void)addImage:(UIImage*)image withSize:(CGSize)size andExclusionPathToUITextView:(UITextView*)textView leftPosition:(BOOL)leftPosition padding:(CGFloat)padding{
+- (void)addImage:(UIImage*)image withSize:(CGSize)size andExclusionPathToUITextView:(UITextView*)textView
+    leftPosition:(BOOL)leftPosition padding:(CGFloat)padding{
   
-    CGFloat leftHandPadding = (leftPosition) ? padding + textView.textContainer.lineFragmentPadding : CGRectGetWidth(textView.frame) - size.width - padding - textView.textContainer.lineFragmentPadding;
+    CGFloat leftHandPadding = (leftPosition) ? padding + textView.textContainer.lineFragmentPadding :
+  CGRectGetWidth(textView.frame) - size.width - padding - textView.textContainer.lineFragmentPadding;
   
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     [imageView setFrame:CGRectMake(leftHandPadding, 60 + padding, size.width, size.height)];
