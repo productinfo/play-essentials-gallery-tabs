@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "EssentialsGalleryTabs"
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = "A gallery of ShinobiEssentials Tabs"
   s.description      = <<-DESC
                        An app demonstrating the out of the box functionality supported by ShinobiEssentials Tabs
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'EssentialsGalleryTabs/EssentialsGalleryTabs/**/*.{h,m}'
   s.dependency 'ShinobiPlayUtils'
-  s.resources = ['EssentialsGalleryTabs/**/EssentialsGalleryTabs-data.plist', 'EssentialsGalleryTabs/**/*.storyboard', 'EssentialsGalleryTabs/**/*.xib', 'EssentialsGalleryTabs/**/*.xcassets']
+  s.resources = ['EssentialsGalleryTabs/**/EssentialsGalleryTabs-data.plist', 'EssentialsGalleryTabs/**/*.storyboard', 'EssentialsGalleryTabs/**/*.xib', 'EssentialsGalleryTabs/**/*.xcassets', 'EssentialsGalleryTabs/**/*.rtf']
   s.frameworks = 'QuartzCore', 'ShinobiEssentials'
   s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"$(DEVELOPER_FRAMEWORKS_DIR)" "$(PROJECT_DIR)/../"' }
 end
