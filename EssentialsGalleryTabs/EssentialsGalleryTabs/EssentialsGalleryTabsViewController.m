@@ -48,6 +48,11 @@
   // Add a border to the tab
   self.tabbedView.layer.borderWidth = 1.f;
   self.tabbedView.layer.borderColor = [[UIColor shinobiDarkGrayColor] colorWithAlphaComponent:0.5].CGColor;
+  
+  self.tabbedView.style.decoration = NO;
+  self.tabbedView.style.defaultFont = [UIFont boldShinobiFontOfSize:16];
+  self.tabbedView.style.defaultOverflowFont = [UIFont shinobiFontOfSize:16];
+  self.tabbedView.style.defaultFontColor = [UIColor shinobiDarkGrayColor];
 }
 
 - (void)addTabs:(int)numberOfTabs {

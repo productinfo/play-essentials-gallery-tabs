@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "shinobi_play_orange_placeholder_image_long@1x.png"
+      "filename" : "play_placeholder_orange_long.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "shinobi_play_orange_placeholder_image_long@2x.png"
+      "filename" : "play_placeholder_orange_long@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "play_placeholder_orange_long@3x.png"
     }
   ],
   "info" : {
