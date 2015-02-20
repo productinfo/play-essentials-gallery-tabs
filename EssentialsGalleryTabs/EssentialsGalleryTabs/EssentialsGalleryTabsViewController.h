@@ -11,8 +11,8 @@
 
 @interface EssentialsGalleryTabsViewController : SPUGalleryManagedViewController<SEssentialsTabbedViewDataSource, SEssentialsTabbedViewDelegate>
 
-@property SEssentialsTabbedView *tabbedView;
-@property NSMutableArray *contentText;
+@property (strong, nonatomic) SEssentialsTabbedView *tabbedView;
+@property (strong, nonatomic) NSMutableArray *contentText;
 
 - (void)resetTabs;
 - (void)styleTabbedView;

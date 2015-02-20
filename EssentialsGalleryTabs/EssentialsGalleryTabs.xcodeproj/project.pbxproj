@@ -22,6 +22,7 @@
 		545979FB1A7657B7003515BF /* ContentTab1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 545979F81A7657B7003515BF /* ContentTab1.rtf */; };
 		545979FC1A7657B7003515BF /* ContentTab2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 545979F91A7657B7003515BF /* ContentTab2.rtf */; };
 		545979FF1A7678A3003515BF /* ContentTab0.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 545979FE1A7678A3003515BF /* ContentTab0.rtf */; };
+		54B6106C1A962222003BA324 /* ShinobiEssentials.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54B6106B1A962222003BA324 /* ShinobiEssentials.bundle */; };
 		54E219AF1A0CCFE1004DB8D6 /* ShinobiEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E219AE1A0CCFE1004DB8D6 /* ShinobiEssentials.framework */; };
 		54E219BA1A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B31A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m */; };
 		54E219BB1A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E219B51A0CD009004DB8D6 /* EssentialsGalleryTabsInvertedViewController.m */; };
@@ -38,7 +39,6 @@
 		68171BF919ADDBC5000AFEEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68171BF819ADDBC5000AFEEB /* Images.xcassets */; };
 		68171C1619ADDC04000AFEEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171C1519ADDC04000AFEEB /* QuartzCore.framework */; };
 		68171C2219ADDCD6000AFEEB /* libShinobiPlayUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68171C1D19ADDC45000AFEEB /* libShinobiPlayUtils.a */; };
-		688418A01A8B7E1F00068B19 /* ShinobiEssentials.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6884189F1A8B7E1F00068B19 /* ShinobiEssentials.bundle */; };
 		688418A71A8B9C3D00068B19 /* EssentialsGalleryTabsOverflowDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688418A61A8B9C3D00068B19 /* EssentialsGalleryTabsOverflowDropdownView.m */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +82,7 @@
 		545979F81A7657B7003515BF /* ContentTab1.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ContentTab1.rtf; sourceTree = "<group>"; };
 		545979F91A7657B7003515BF /* ContentTab2.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ContentTab2.rtf; sourceTree = "<group>"; };
 		545979FE1A7678A3003515BF /* ContentTab0.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ContentTab0.rtf; sourceTree = "<group>"; };
+		54B6106B1A962222003BA324 /* ShinobiEssentials.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ShinobiEssentials.bundle; path = ../../../../../../Library/ShinobiEssentials/ShinobiEssentials.bundle; sourceTree = "<group>"; };
 		54E219AE1A0CCFE1004DB8D6 /* ShinobiEssentials.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiEssentials.framework; path = Library/Frameworks/ShinobiEssentials.framework; sourceTree = DEVELOPER_DIR; };
 		54E219B21A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsEditViewController.h; sourceTree = "<group>"; };
 		54E219B31A0CD009004DB8D6 /* EssentialsGalleryTabsEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsEditViewController.m; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		68171BFF19ADDBC5000AFEEB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		68171C1519ADDC04000AFEEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68171C1719ADDC45000AFEEB /* ShinobiPlayUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShinobiPlayUtils.xcodeproj; path = ShinobiPlayUtils/ShinobiPlayUtils/ShinobiPlayUtils.xcodeproj; sourceTree = "<group>"; };
-		6884189F1A8B7E1F00068B19 /* ShinobiEssentials.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShinobiEssentials.bundle; sourceTree = "<group>"; };
 		688418A51A8B9C3D00068B19 /* EssentialsGalleryTabsOverflowDropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialsGalleryTabsOverflowDropdownView.h; sourceTree = "<group>"; };
 		688418A61A8B9C3D00068B19 /* EssentialsGalleryTabsOverflowDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssentialsGalleryTabsOverflowDropdownView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,7 +241,7 @@
 		68171BE719ADDBC5000AFEEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6884189F1A8B7E1F00068B19 /* ShinobiEssentials.bundle */,
+				54B6106B1A962222003BA324 /* ShinobiEssentials.bundle */,
 				545979FE1A7678A3003515BF /* ContentTab0.rtf */,
 				545979F81A7657B7003515BF /* ContentTab1.rtf */,
 				545979F91A7657B7003515BF /* ContentTab2.rtf */,
@@ -341,12 +341,12 @@
 			files = (
 				5418FDF51A71364300EE15EC /* Roboto-Thin.ttf in Resources */,
 				5418FDF21A71364300EE15EC /* Roboto-Medium.ttf in Resources */,
+				54B6106C1A962222003BA324 /* ShinobiEssentials.bundle in Resources */,
 				545979FF1A7678A3003515BF /* ContentTab0.rtf in Resources */,
 				5418FDEE1A71364300EE15EC /* Roboto-BoldItalic.ttf in Resources */,
 				5418FDF11A71364300EE15EC /* Roboto-LightItalic.ttf in Resources */,
 				5418FDF31A71364300EE15EC /* Roboto-MediumItalic.ttf in Resources */,
 				68171BF919ADDBC5000AFEEB /* Images.xcassets in Resources */,
-				688418A01A8B7E1F00068B19 /* ShinobiEssentials.bundle in Resources */,
 				5418FDF01A71364300EE15EC /* Roboto-Light.ttf in Resources */,
 				68171BEB19ADDBC5000AFEEB /* InfoPlist.strings in Resources */,
 				5418FDEC1A71364300EE15EC /* Roboto-BlackItalic.ttf in Resources */,

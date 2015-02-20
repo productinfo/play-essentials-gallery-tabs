@@ -10,18 +10,16 @@
 
 @implementation EssentialsGalleryTabsOverflowViewController
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  
+- (void)createTabbedView {  
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = NO;
   self.tabbedView.hasNewTabButton = NO;
   self.tabbedView.hasOverflowDropdown = YES;
   [self.tabsView addSubview:self.tabbedView];
   
-  [self initialiseDataSource];
-  [self addTabs:15];
   [self styleTabbedView];
+  [self initialiseDataSource];
+  [self addTabs:15];  
 }
 
 @end

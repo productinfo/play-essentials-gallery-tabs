@@ -12,7 +12,9 @@
 
 @interface EssentialsGalleryTabsViewController ()
 
-@property NSMutableDictionary *mapTabToView;
+@property (strong, nonatomic) NSMutableDictionary *mapTabToView;
+@property (assign, nonatomic) NSInteger activeTab;
+@property (assign, nonatomic) CGPoint scrollableTabBarContentOffset;
 
 @end
 
@@ -21,19 +23,54 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.tabbedView.delegate = self;
-  [self styleTabbedView];
+  [self createTabbedView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  if (!self.tabbedView) {
+    [self createTabbedView];
+    
+    // Restore position scrolled to in tab selector scroll view
+    ((SEssentialsScrollableTabBar*)self.tabbedView.tabBarView).contentOffset = self.scrollableTabBarContentOffset;
+    
+    // Restore active tab
+    [self.tabbedView activateTabDisplayedAtIndex:self.activeTab];
+  }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+  
+  // Save position of active tab
+  self.activeTab = (NSInteger)[self.tabbedView.allTabs indexOfObject:self.tabbedView.activeTab];
+  
+  // Save position scrolled to in tab selector scroll view
+  SEssentialsScrollableTabBar *scrollableTabBar = (SEssentialsScrollableTabBar*)self.tabbedView.tabBarView;
+  self.scrollableTabBarContentOffset = scrollableTabBar.contentOffset;
+  
+  self.contentText = nil;
+  self.mapTabToView = nil;
+  [self.tabbedView removeFromSuperview];
+  self.tabbedView = nil;
+  
+  [super viewDidDisappear:animated];
+}
+
+- (void)createTabbedView {
+  // Implement in subclass
 }
 
 - (void)initialiseDataSource {
-  self.tabbedView.dataSource = self;
   self.mapTabToView = [NSMutableDictionary new];
+  self.tabbedView.dataSource = self;
+  self.tabbedView.delegate = self;
 }
 
 - (void)resetTabs {
   [self initialiseDataSource];
   [self addTabs:3];
-  for(int i = ((int)self.tabbedView.allTabs.count - 3); i > 0; --i){
+  for (int i = ((int)self.tabbedView.allTabs.count - 3); i > 0; --i) {
     [self.tabbedView removeTabDisplayedAtIndex:0];
   }
 }

@@ -10,16 +10,14 @@
 
 @implementation EssentialsGalleryTabsSelectViewController
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  
+- (void)createTabbedView {
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = NO;
   [self.tabsView addSubview:self.tabbedView];
   
+  [self styleTabbedView];
   [self initialiseDataSource];
   [self addTabs:3];
-  [self styleTabbedView];
 }
 
 @end

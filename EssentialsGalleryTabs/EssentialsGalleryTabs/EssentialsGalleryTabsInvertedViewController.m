@@ -10,16 +10,14 @@
 
 @implementation EssentialsGalleryTabsInvertedViewController
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  
+- (void)createTabbedView {  
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds
                                                   tabBarPosition:SEssentialsTabBarPositionBottom];
   [self.tabsView addSubview:self.tabbedView];
-    
+  
+  [self styleTabbedView];
   [self initialiseDataSource];
   [self addTabs:3];
-  [self styleTabbedView];
 }
 
 @end
