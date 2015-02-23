@@ -18,6 +18,11 @@
 
 @implementation EssentialsGalleryTabsEditViewController
 
+-(void)viewDidLoad {
+  self.nextTab = 8;
+  [super viewDidLoad];
+}
+
 - (void)createTabbedView {
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = YES;
@@ -27,18 +32,22 @@
   self.tabbedView.tabOverflowDropdown = self.overflowView;
   [self.tabsView addSubview:self.tabbedView];
   
-  // Use the number of tabs specified by the user unless this is the initial setup when
-  // self.nextTab is equal to 0 in which case we want to set this to 8 to display 8 tabs
-  self.nextTab = MAX(self.nextTab, 8);
-  
   [self styleTabbedView];
   [self initialiseDataSource];
+}
+
+- (void)setupTabbedView {
+  [self createTabbedView];
   [self addTabs:self.nextTab];
 }
 
+- (void)restoreTabbedView {
+  [self createTabbedView];
+  [self restoreTabs];
+}
+
 - (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
-  NSString *name = [NSString stringWithFormat:@"Tab %zd", self.nextTab + 1];
-  return [self createTabWithName:name atIndex:(NSUInteger)self.nextTab++];
+  return [self createTabWithValue:self.nextTab++];
 }
 
 - (IBAction)resetDemo{
@@ -50,6 +59,10 @@
   }
   
   [self.overflowView hideOverflowForTabbedView:self.tabbedView];
+}
+
+- (void)saveTabs {
+  [self saveTabs:self.tabbedView.allTabs];
 }
 
 @end

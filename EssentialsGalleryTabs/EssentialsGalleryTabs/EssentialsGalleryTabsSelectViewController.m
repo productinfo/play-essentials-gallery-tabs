@@ -17,7 +17,20 @@
   
   [self styleTabbedView];
   [self initialiseDataSource];
+}
+
+- (void)setupTabbedView {
+  [self createTabbedView];
   [self addTabs:3];
+}
+
+- (void)restoreTabbedView {
+  [self createTabbedView];
+  [self restoreTabs];
+}
+
+- (void)saveTabs {
+  [self saveTabs:self.tabbedView.allTabs];
 }
 
 @end

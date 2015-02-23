@@ -23,14 +23,14 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  [self createTabbedView];
+  [self setupTabbedView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
   if (!self.tabbedView) {
-    [self createTabbedView];
+    [self restoreTabbedView];
     
     // Restore position scrolled to in tab selector scroll view
     ((SEssentialsScrollableTabBar*)self.tabbedView.tabBarView).contentOffset = self.scrollableTabBarContentOffset;
@@ -41,6 +41,9 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+  
+  // Save tabs
+  [self saveTabs];
   
   // Save position of active tab
   self.activeTab = (NSInteger)[self.tabbedView.allTabs indexOfObject:self.tabbedView.activeTab];
@@ -57,7 +60,11 @@
   [super viewDidDisappear:animated];
 }
 
-- (void)createTabbedView {
+- (void)setupTabbedView {
+  // Implement in subclass
+}
+
+- (void)restoreTabbedView {
   // Implement in subclass
 }
 
@@ -92,27 +99,43 @@
   self.tabbedView.style.defaultFontColor = [UIColor shinobiDarkGrayColor];
 }
 
-- (void)addTabs:(int)numberOfTabs {
-  for(int i = 0; i < numberOfTabs; ++i){
-    [self.tabbedView addTab:[self createTabWithName:[NSString stringWithFormat:@"Tab %i", (i + 1)] atIndex:(NSUInteger)i]];
+- (void)saveTabs {
+  // Implement in subclass
+}
+
+- (void)saveTabs:(NSArray*)tabs {
+  self.tabArray = [NSMutableArray new];
+  for (SEssentialsTab *tab in tabs) {
+    [self.tabArray addObject:[NSNumber numberWithInt:([[tab.name stringByReplacingOccurrencesOfString:@"Tab " withString:@""] intValue]-1)]];
   }
 }
 
-- (SEssentialsTab *)createTabWithName:(NSString *)name atIndex:(NSUInteger)index {
-  SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:name icon:nil];
+- (void)restoreTabs {
+  for(int i = 0; i < self.tabArray.count; ++i){
+    [self.tabbedView addTab:[self createTabWithValue:[self.tabArray[(NSUInteger)i] intValue]]];
+  }
+}
+
+- (void)addTabs:(int)numberOfTabs {
+  for (int i = 0; i < numberOfTabs; ++i){
+    [self.tabbedView addTab:[self createTabWithValue:i]];
+  }
+}
+
+- (SEssentialsTab *)createTabWithValue:(int)value {
+  SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:[NSString stringWithFormat:@"Tab %i", (value + 1)] icon:nil];
 
   UITextView *textView = [[UITextView alloc] initWithFrame:self.tabbedView.contentViewBounds];
   textView.editable = NO;
   
   CGFloat padding = 20;
-  
   textView.textContainerInset = UIEdgeInsetsMake(textView.textContainerInset.top + padding,
                                                  textView.textContainerInset.left + padding,
                                                  textView.textContainerInset.bottom,
                                                  textView.textContainerInset.right + padding);
   
   // Retreive path to rtf containing text for display in the SEssentialsTabbedView
-  NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"ContentTab%lu", (unsigned long)(index % 3)] ofType:@"rtf"];
+  NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"ContentTab%lu", (unsigned long)(value % 3)] ofType:@"rtf"];
   
   // Load the data from the rtf at the path
   NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
@@ -126,13 +149,13 @@
   textView.attributedText = attributedString;
   textView.textAlignment = NSTextAlignmentJustified;
   
-  BOOL imageOnLeft = (index % 2) ? NO : YES;
+  BOOL imageOnLeft = (value % 2) ? NO : YES;
   [self addImage:[UIImage imageNamed:@"shinobi_play_orange_placeholder_image"]
         withSize:CGSizeMake(85, 85) andExclusionPathToUITextView:textView
     leftPosition:imageOnLeft
          padding:padding];
   
-  if ((index % 3) == 1) {
+  if ((value % 3) == 1) {
     [textView sizeToFit];
     [self addImage:[UIImage imageNamed:@"shinobi_play_orange_placeholder_image_long"]
          withFrame:CGRectMake(190, CGRectGetMaxY(textView.frame) + 12, 450, 55)

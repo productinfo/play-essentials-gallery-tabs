@@ -13,11 +13,25 @@
 - (void)createTabbedView {  
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds
                                                   tabBarPosition:SEssentialsTabBarPositionBottom];
+  self.tabbedView.editable = NO;
   [self.tabsView addSubview:self.tabbedView];
   
   [self styleTabbedView];
   [self initialiseDataSource];
+}
+
+- (void)setupTabbedView {
+  [self createTabbedView];
   [self addTabs:3];
+}
+
+- (void)restoreTabbedView {
+  [self createTabbedView];
+  [self restoreTabs];
+}
+
+- (void)saveTabs {
+  [self saveTabs:self.tabbedView.allTabs];
 }
 
 @end
