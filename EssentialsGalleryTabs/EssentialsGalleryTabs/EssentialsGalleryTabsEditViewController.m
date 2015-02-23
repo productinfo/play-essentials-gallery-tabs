@@ -18,33 +18,42 @@
 
 @implementation EssentialsGalleryTabsEditViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
+  self.nextTab = 8;
   [super viewDidLoad];
-    
+}
+
+- (void)createTabbedView {
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = YES;
-  self.tabbedView.hasNewTabButton = YES;  
+  self.tabbedView.hasNewTabButton = YES;
   
   self.overflowView = [[EssentialsGalleryTabsOverflowDropdownView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
   self.tabbedView.tabOverflowDropdown = self.overflowView;
-  
-  self.nextTab = 8;
   [self.tabsView addSubview:self.tabbedView];
   
-  [self initialiseDataSource];
-  [self addTabs:8];
   [self styleTabbedView];
+  [self initialiseDataSource];
+}
+
+- (void)setupTabbedView {
+  [self createTabbedView];
+  [self addTabs:self.nextTab];
+}
+
+- (void)restoreTabbedView {
+  [self createTabbedView];
+  [self restoreTabs];
 }
 
 - (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
-  NSString *name = [NSString stringWithFormat:@"Tab %zd", self.nextTab + 1];
-  return [self createTabWithName:name atIndex:(NSUInteger)self.nextTab++];
+  return [self createTabWithValue:self.nextTab++];
 }
 
 - (IBAction)resetDemo{
   self.nextTab = 8;
   [self initialiseDataSource];
-  [self addTabs:8];
+  [self addTabs:self.nextTab];
   for(int i = ((int)self.tabbedView.allTabs.count - 8); i > 0; --i){
     [self.tabbedView removeTabDisplayedAtIndex:0];
   }

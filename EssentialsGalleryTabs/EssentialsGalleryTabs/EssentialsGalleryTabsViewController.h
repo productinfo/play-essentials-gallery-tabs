@@ -11,13 +11,16 @@
 
 @interface EssentialsGalleryTabsViewController : SPUGalleryManagedViewController<SEssentialsTabbedViewDataSource, SEssentialsTabbedViewDelegate>
 
-@property SEssentialsTabbedView *tabbedView;
-@property NSMutableArray *contentText;
+@property (strong, nonatomic) SEssentialsTabbedView *tabbedView;
+@property (strong, nonatomic) NSMutableArray *contentText;
+@property (strong, nonatomic) NSMutableArray *tabArray;
 
 - (void)resetTabs;
+- (void)saveTabs:(NSArray*)tabs;
 - (void)styleTabbedView;
 - (void)addTabs:(int)numberOfTabs;
-- (SEssentialsTab *)createTabWithName:(NSString *)name atIndex:(NSUInteger)index;
+- (void)restoreTabs;
+- (SEssentialsTab *)createTabWithValue:(int)value;
 - (void)initialiseDataSource;
 
 @end
