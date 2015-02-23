@@ -16,7 +16,6 @@
 @property (strong, nonatomic) NSMutableArray *tabArray;
 
 - (void)resetTabs;
-- (void)saveTabs:(NSArray*)tabs;
 - (void)styleTabbedView;
 - (void)addTabs:(int)numberOfTabs;
 - (void)restoreTabs;

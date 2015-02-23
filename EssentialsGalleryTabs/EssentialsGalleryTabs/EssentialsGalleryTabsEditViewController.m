@@ -46,7 +46,7 @@
   [self restoreTabs];
 }
 
-- (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView; {
+- (SEssentialsTab *)tabForTabbedView:(SEssentialsTabbedView *)tabbedView {
   return [self createTabWithValue:self.nextTab++];
 }
 

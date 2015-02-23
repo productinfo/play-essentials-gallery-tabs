@@ -110,13 +110,13 @@
 }
 
 - (void)restoreTabs {
-  for(int i = 0; i < self.tabArray.count; ++i){
-    [self.tabbedView addTab:[self createTabWithValue:[self.tabArray[(NSUInteger)i] intValue]]];
+  for (NSUInteger i = 0; i < self.tabArray.count; ++i) {
+    [self.tabbedView addTab:[self createTabWithValue:[self.tabArray[i] intValue]]];
   }
 }
 
 - (void)addTabs:(int)numberOfTabs {
-  for (int i = 0; i < numberOfTabs; ++i){
+  for (int i = 0; i < numberOfTabs; ++i) {
     [self.tabbedView addTab:[self createTabWithValue:i]];
   }
 }
