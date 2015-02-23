@@ -61,8 +61,4 @@
   [self.overflowView hideOverflowForTabbedView:self.tabbedView];
 }
 
-- (void)saveTabs {
-  [self saveTabs:self.tabbedView.allTabs];
-}
-
 @end

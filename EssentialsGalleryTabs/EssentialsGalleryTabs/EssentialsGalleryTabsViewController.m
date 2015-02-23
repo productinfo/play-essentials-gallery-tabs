@@ -100,13 +100,12 @@
 }
 
 - (void)saveTabs {
-  // Implement in subclass
-}
-
-- (void)saveTabs:(NSArray*)tabs {
   self.tabArray = [NSMutableArray new];
-  for (SEssentialsTab *tab in tabs) {
-    [self.tabArray addObject:[NSNumber numberWithInt:([[tab.name stringByReplacingOccurrencesOfString:@"Tab " withString:@""] intValue]-1)]];
+  for (SEssentialsTab *tab in self.tabbedView.allTabs) {
+    NSString *tabNumberString = [tab.name stringByReplacingOccurrencesOfString:@"Tab " withString:@""];
+    NSInteger tabValue = [tabNumberString intValue] - 1;
+    NSNumber *tabNumber = [NSNumber numberWithInt:tabValue];
+    [self.tabArray addObject:tabNumber];
   }
 }
 

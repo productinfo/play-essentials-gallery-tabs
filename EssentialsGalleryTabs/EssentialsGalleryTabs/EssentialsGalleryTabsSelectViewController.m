@@ -29,8 +29,4 @@
   [self restoreTabs];
 }
 
-- (void)saveTabs {
-  [self saveTabs:self.tabbedView.allTabs];
-}
-
 @end
