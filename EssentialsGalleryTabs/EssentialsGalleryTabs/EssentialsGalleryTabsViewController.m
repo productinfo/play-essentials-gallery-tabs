@@ -104,9 +104,7 @@
   self.tabArray = [NSMutableArray new];
   for (SEssentialsTab *tab in self.tabbedView.allTabs) {
     NSString *tabNumberString = [tab.name stringByReplacingOccurrencesOfString:@"Tab " withString:@""];
-    NSInteger tabValue = [tabNumberString intValue] - 1;
-    NSNumber *tabNumber = [NSNumber numberWithInt:tabValue];
-    [self.tabArray addObject:tabNumber];
+    [self.tabArray addObject:@([tabNumberString integerValue] - 1)];
   }
 }
 
@@ -116,14 +114,14 @@
   }
 }
 
-- (void)addTabs:(int)numberOfTabs {
+- (void)addTabs:(NSInteger)numberOfTabs {
   for (int i = 0; i < numberOfTabs; ++i) {
     [self.tabbedView addTab:[self createTabWithValue:i]];
   }
 }
 
-- (SEssentialsTab *)createTabWithValue:(int)value {
-  SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:[NSString stringWithFormat:@"Tab %i", (value + 1)] icon:nil];
+- (SEssentialsTab *)createTabWithValue:(NSInteger)value {
+  SEssentialsTab *tab = [[SEssentialsTab alloc] initWithName:[NSString stringWithFormat:@"Tab %ld", (long)(value + 1)] icon:nil];
 
   UITextView *textView = [[UITextView alloc] initWithFrame:self.tabbedView.contentViewBounds];
   textView.editable = NO;
@@ -135,7 +133,7 @@
                                                  textView.textContainerInset.right + padding);
   
   // Retreive path to rtf containing text for display in the SEssentialsTabbedView
-  NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"ContentTab%lu", (unsigned long)(value % 3)] ofType:@"rtf"];
+  NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"ContentTab%ld", (long)(value % 3)] ofType:@"rtf"];
   
   // Load the data from the rtf at the path
   NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];

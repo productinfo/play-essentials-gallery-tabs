@@ -17,9 +17,9 @@
 
 - (void)resetTabs;
 - (void)styleTabbedView;
-- (void)addTabs:(int)numberOfTabs;
+- (void)addTabs:(NSInteger)numberOfTabs;
 - (void)restoreTabs;
-- (SEssentialsTab *)createTabWithValue:(int)value;
+- (SEssentialsTab *)createTabWithValue:(NSInteger)value;
 - (void)initialiseDataSource;
 
 @end
