@@ -23,6 +23,25 @@
   [super viewDidLoad];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  if (self.tabbedView && [self isMovingToParentViewController]) {
+    // Hide overflow if we have a tabbed view at this point - it probably
+    // means a snapshot is about to be taken inside play
+    [self.overflowView hideOverflowForTabbedView:self.tabbedView];
+  }
+  
+  [super viewWillAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+  if ([self isMovingFromParentViewController]) {
+    // Throw away overflow before its parent tabbed view is destroyed
+    self.overflowView = nil;
+  }
+  
+  [super viewDidDisappear:animated];
+}
+
 - (void)createTabbedView {
   self.tabbedView = [[SEssentialsTabbedView alloc] initWithFrame:self.tabsView.bounds];
   self.tabbedView.editable = YES;
