@@ -41,21 +41,22 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-  
-  // Save tabs
-  [self saveTabs];
-  
-  // Save position of active tab
-  self.activeTab = (NSInteger)[self.tabbedView.allTabs indexOfObject:self.tabbedView.activeTab];
-  
-  // Save position scrolled to in tab selector scroll view
-  SEssentialsScrollableTabBar *scrollableTabBar = (SEssentialsScrollableTabBar*)self.tabbedView.tabBarView;
-  self.scrollableTabBarContentOffset = scrollableTabBar.contentOffset;
-  
-  self.contentText = nil;
-  self.mapTabToView = nil;
-  [self.tabbedView removeFromSuperview];
-  self.tabbedView = nil;
+  if ([self isMovingFromParentViewController]) {
+    // Save tabs
+    [self saveTabs];
+    
+    // Save position of active tab
+    self.activeTab = (NSInteger)[self.tabbedView.allTabs indexOfObject:self.tabbedView.activeTab];
+    
+    // Save position scrolled to in tab selector scroll view
+    SEssentialsScrollableTabBar *scrollableTabBar = (SEssentialsScrollableTabBar*)self.tabbedView.tabBarView;
+    self.scrollableTabBarContentOffset = scrollableTabBar.contentOffset;
+    
+    self.contentText = nil;
+    self.mapTabToView = nil;
+    [self.tabbedView removeFromSuperview];
+    self.tabbedView = nil;
+  }
   
   [super viewDidDisappear:animated];
 }
