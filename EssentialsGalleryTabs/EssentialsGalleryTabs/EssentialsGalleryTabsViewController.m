@@ -9,6 +9,7 @@
 #import "EssentialsGalleryTabsViewController.h"
 #import "ShinobiPlayUtils/UIFont+SPUFont.h"
 #import "ShinobiPlayUtils/UIColor+SPUColor.h"
+#import "ShinobiPlayUtils/UITextView+SPUImage.h"
 
 @interface EssentialsGalleryTabsViewController ()
 
@@ -147,11 +148,12 @@
   textView.attributedText = attributedString;
   textView.textAlignment = NSTextAlignmentJustified;
   
-  BOOL imageOnLeft = (value % 2) ? NO : YES;
-  [self addImage:[UIImage imageNamed:@"shinobi_play_orange_placeholder_image"]
-        withSize:CGSizeMake(85, 85) andExclusionPathToUITextView:textView
-    leftPosition:imageOnLeft
-         padding:padding];
+  SPUTextViewImageAlignment imageAlignment = (value % 2) ? SPUTextViewImageAlignmentRight : SPUTextViewImageAlignmentLeft;
+  [textView addImage:[UIImage imageNamed:@"shinobi_play_orange_placeholder_image"]
+           imageSize:CGSizeMake(85, 85)
+      imageAlignment:imageAlignment
+           yPosition:60
+             padding:padding];
   
   if ((value % 3) == 1) {
     [textView sizeToFit];
@@ -162,38 +164,6 @@
   
   self.mapTabToView[[NSValue valueWithNonretainedObject:tab]] = textView;
   return tab;
-}
-
-- (void)addImage:(UIImage*)image withSize:(CGSize)size andExclusionPathToUITextView:(UITextView*)textView
-    leftPosition:(BOOL)leftPosition padding:(CGFloat)padding{
-  
-    CGFloat leftHandPadding = (leftPosition) ? padding + textView.textContainer.lineFragmentPadding
-                                             : CGRectGetWidth(textView.frame) - size.width - padding - textView.textContainer.lineFragmentPadding;
-  
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    [imageView setFrame:CGRectMake(leftHandPadding, 60 + padding, size.width, size.height)];
-  
-    // We need to add an exclusion path to the text view so the text will wrap around the image.
-    // The coordinates of the exclusion path need to be specified in container coordinates like so
-    CGRect imageFrame = [textView convertRect:imageView.bounds fromView:imageView];
-    imageFrame.origin.x -= textView.textContainerInset.left;
-    imageFrame.origin.y -= textView.textContainerInset.top;
-
-    UIBezierPath *exclusionPath;
-    if (leftPosition) {
-      exclusionPath = [UIBezierPath bezierPathWithRect:CGRectMake(CGRectGetMinX(imageFrame),
-                                                                  CGRectGetMinY(imageFrame),
-                                                                  CGRectGetWidth(imageFrame) + padding,
-                                                                  CGRectGetHeight(imageFrame))];
-      
-    } else {
-      exclusionPath = [UIBezierPath bezierPathWithRect:CGRectMake(CGRectGetMinX(imageFrame) - padding,
-                                                                  CGRectGetMinY(imageFrame),
-                                                                  CGRectGetWidth(imageFrame) + (padding * 2),
-                                                                  CGRectGetHeight(imageFrame))];
-    }
-    textView.textContainer.exclusionPaths = @[exclusionPath];
-    [textView addSubview:imageView];
 }
 
 - (void) addImage:(UIImage*)image withFrame:(CGRect)frame toUITextView:(UITextView*)textView{
