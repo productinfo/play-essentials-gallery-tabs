@@ -1,4 +1,4 @@
-shinobiplay: Essentials Gallery Accordion (Objective-C)
+shinobiplay: Essentials Gallery Tabs (Objective-C)
 =====================
 
 An app demonstrating the out of the box functionality supported by **shinobiessentials** accordions.
