@@ -37,9 +37,9 @@ You'll need to add the links to the **shinobiessentials** bundle to the project.
 
 If you haven't run the **shinobiessentials** installer, you'll also need drag ShinobiEssentials.framework into Xcode's 'frameworks' group. 
 
-If you're using the trial version you'll need to add your license key. To do so, open up **EssentialsGalleryTabsViewController.m** and add the following line inside `viewDidLoad`:
+If you're using the trial version you'll need to add your trial key. To do so, open up **EssentialsGalleryTabsViewController.m** and add the following line inside `viewDidLoad`:
 
-    [ShinobiEssentials setLicenseKey:@"your license key"];
+    [ShinobiEssentials setTrialKey:@"your trial key"];
 
 Contributing
 ------------
